@@ -1,11 +1,63 @@
 * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-  }
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 62.5%;
+}
+body {
+  height: 40cm;
+}
+
+.header-box{
+  position: sticky;
+  top: 0;
+  background-color:aquamarine;    
+  width: 100vw;
+  height: 15rem;
+  z-index: 1;
+}
 
 .header-top {
-    width: 100vw;
-    height: 10rem;
-    background-color: orangered;
+  width: 90vw;
+  height: 5rem;
+  display: inline-block;
+  background-color: orangered;
+  border-radius: 4px;
+  position:relative;
+  top: 50%;
+  left: 1rem;
+  transform: translate(0%,-50%);
+  z-index: 1;
+}
+
+.search-button {
+  position: absolute;
+  right: 3rem;
+  bottom: 1rem;
+}
+
+.search-bar {
+  display: inline;
+  position: absolute;
+  bottom: 1rem;
+  right: 6rem;
+}
+
+.logo {
+  display: inline-block;
+  position: relative;
+  top: -3rem;
+  z-index: 2;
+  width: 20rem;
+}
+
+.main {
+  width: 80vw;
+  height: 100rem;
+  background-color: darkslategray;
+  position: relative;
+  top: 9rem;
 }
