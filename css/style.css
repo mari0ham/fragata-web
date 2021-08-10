@@ -15,68 +15,120 @@ figure {
   display:inline-block;
 }
 
-.header-box{
+.top-bar {
+  width: 100%;
+  height: 4rem;
+  background-color: steelblue;
+  color: white;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  font-size: 2rem;
+  padding-right: 20%;
+}
+
+.top-bar__login {
+  color: white;
+  text-decoration: none;
+}
+
+.top-bar__login:hover {
+  color:chartreuse;
+  text-decoration: none;
+}
+
+.top-bar__login:active {
+  color: tomato;
+  text-decoration: none;
+}
+
+.header{
   position: sticky;
   top: 0;
-  background-color:aquamarine;    
+  background-color:none;    
   width: 100%;
-  height: 15rem;
+  height: 12rem;
   z-index: 1;
 }
 
-.header-top {
-  width: 90vw;
-  height: 5rem;
+.header__solid {
+  width: 70vw;
+  height: 7rem;
   display: inline-block;
   background-color: orangered;
-  border-radius: 4px;
+  border-radius: 1rem;
   position:relative;
   top: 50%;
-  left: 1rem;
   transform: translate(0%,-50%);
+  z-index: 2;
+}
+
+.search {
+  display: flex;
+  position: absolute;
+  width: 50%;
+  bottom: 1rem;
+  left: 50%;
+  transform: translate(-50%,0);
+}
+.search__input-box{
+  display: inline;
+  width: 70%;
+}
+.search__button {
+  width: 30%;
+}
+
+.header__logo{
+  height: 7rem;
+  width: 20rem;
+  position: relative;
+  top: 50%;
+  padding-left:2rem;
+  transform: translate(0%,-50%);
+  background-color: white;
+  border-radius: 1rem ;
   z-index: 1;
 }
 
-.search-button {
-  position: absolute;
-  right: 3rem;
-  bottom: 1rem;
-}
-
-.search-bar {
-  display: inline;
-  position: absolute;
-  bottom: 1rem;
-  right: 6rem;
-}
-
-.logo {
+.logo-img {
   display: inline-block;
-  position: relative;
-  top: -3rem;
-  z-index: 2;
-  width: 20rem;
+  width: 80%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
+
+.main{
+  display: flex;
+  justify-content: space-evenly;
 }
 
 .side-menu {
-  width: 20%;
+  width: 30%;
   min-width: 10rem;
   height: 100rem;
-  display: inline-block;
+  display: flex;
   position: relative;
   border: 1px solid;
   border-color: coral;
   border-radius: 2rem;
-  top: 2rem;
-  left: 1rem;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
 }
 
-.main {
+.side-menu__item {
+  width: 80%;
+  height: 20rem;
+  background-color: chocolate;
+  border-radius: 2rem;
+}
+
+.content {
   display: inline-block;
   width: 60vw;
   height: 100rem;
   background-color: darkslategray;
-  position: relative;
-  top: 2rem;
-  left: 2rem;
 }
