@@ -74,9 +74,123 @@ figure {
 .search__input-box{
   display: inline;
   width: 70%;
+  border-bottom: #fda2a2;
+  border-bottom-style: solid;
+  border-bottom-width: 1px;
 }
-.search__button {
-  width: 30%;
+
+.search__input-text
+{
+  color: white;
+  background-color: transparent;
+  padding: 0;
+  margin: 0;
+  border: 0;
+  outline: none;
+}
+
+.search__input-text::placeholder
+{
+    color: #fda2a2;
+}
+
+.lupa {
+  width: 20%;
+  padding-left: 1rem;
+}
+
+.lupa__button
+{
+    position: relative;
+    display: block;
+    width: 2rem;
+    height: 2rem;
+    cursor: pointer;
+    outline: none;
+    background-color: transparent;
+    padding: 0;
+    margin: 0;
+    border: 0;
+}
+
+.lupa__bolita
+{
+    position: absolute;
+    top: -0.5rem;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    margin-top: 0;
+    border-width: 0px;
+    border: 0.5rem solid #fff;
+    background-color: transparent;
+    border-radius: 50%;
+    transition: 0.5s ease all;
+}
+
+.lupa__palito
+{
+    position: absolute;
+    top: 1.3rem;
+    left: 1.2rem;
+    display: block;
+    width: 1rem;
+    height: 0.5rem;
+    background-color:transparent;
+    border-radius: 10px;
+    transform: rotateZ(50deg);
+    transition: 0.5s ease all;
+}
+
+.lupa__palito:before, .lupa__palito:after
+{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 1rem;
+    height: 0.5rem;
+    background-color: #fff;
+    border-radius: 10px;
+    transform: rotateZ(0);
+    transition: 0.5s ease all;
+}
+
+.lupa:hover .lupa__bolita
+{
+  top: 40%;
+  width: 2rem;
+  height: 0.5rem;
+  border-width: 0;
+  background-color: #fff;
+  border-radius: 20px;
+}
+
+.lupa:hover .lupa__palito
+{
+    top: 40%;
+    left:0;
+    width: 2rem;
+    transform: rotateZ(0);
+}
+
+.lupa:hover .lupa__palito:before
+{
+    bottom: 3px;
+    transform: rotateZ(52deg);
+}
+
+.lupa:hover .lupa__palito:after
+{
+    bottom: -3px;
+    transform: rotateZ(-52deg);
+}
+
+.lupa:hover .lupa__palito:before, .lupa:hover .lupa__palito:after
+{
+    right: 0;
+    width: 1rem;
+    background-color: #fff;
 }
 
 .header__logo{
@@ -132,3 +246,4 @@ figure {
   height: 100rem;
   background-color: darkslategray;
 }
+
