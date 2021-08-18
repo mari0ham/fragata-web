@@ -54,7 +54,7 @@ figure {
 }
 
 .header{
-  position: sticky;
+  position: flex;
   top: 0;
   background-color:none;    
   width: 100%;
